@@ -2,7 +2,7 @@ import { createClient } from "@openauthjs/openauth/client"
 import { NextResponse } from "next/server"
 
 export const client = createClient({
-  clientID: "astro",
+  clientID: "next.js",
   issuer: "http://localhost:3000",
 })
 

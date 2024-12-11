@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
-import { client } from "@/lib/auth"
+import { client } from "./lib/auth"
 
 // This function can be marked `async` if using `await` inside
 export function middleware(request: NextRequest) {
@@ -20,7 +20,6 @@ export function middleware(request: NextRequest) {
     client.authorize(url.origin + "/api/callback", "code"),
     302,
   )
-  return NextResponse.next()
 }
 
 // See "Matching Paths" below to learn more
